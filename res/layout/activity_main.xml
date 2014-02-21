@@ -1,0 +1,218 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <StackView
+        android:id="@+id/stackView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mBtnAdd25kg"
+        android:layout_below="@+id/mBtnAdd25kg"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="127dp" >
+    </StackView>
+
+    <Button
+        android:id="@+id/mBtnAdd20Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mBtnAdd25kg"
+        android:layout_below="@+id/mBtnAdd25kg"
+        android:text="+20Kg"
+        android:onClick="addWeight"
+        android:tag="20" />
+
+    <Button
+        android:id="@+id/mBtnAdd15Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mBtnAdd20Kg"
+        android:layout_below="@+id/mBtnAdd20Kg"
+        android:text="+15Kg"
+        android:onClick="addWeight"
+        android:tag="15"  />
+
+    <Button
+        android:id="@+id/mBtnAdd10Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mBtnAdd15Kg"
+        android:layout_below="@+id/mBtnAdd15Kg"
+        android:text="+10Kg"
+        android:onClick="addWeight"
+        android:tag="10"  />
+
+    <Button
+        android:id="@+id/mBtnAdd25kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="+25Kg"
+        android:onClick="addWeight"
+        android:tag="25"  />
+
+    <Button
+        android:id="@+id/mBtnRem10Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnAdd10Kg"
+        android:layout_alignBottom="@+id/mBtnAdd10Kg"
+        android:layout_alignLeft="@+id/mBtnRem25kg"
+        android:text="-10Kg"
+        android:onClick="removeWeight"
+        android:tag="10"  />
+
+    <Button
+        android:id="@+id/mBtnRem25kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/mBtnAdd25kg"
+        android:layout_toRightOf="@+id/mBtnAdd20Kg"
+        android:text="-25Kg"
+        android:onClick="removeWeight"
+        android:tag="25"  />
+
+    <Button
+        android:id="@+id/mBtnRem20Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mBtnRem25kg"
+        android:layout_below="@+id/mBtnRem25kg"
+        android:text="-20Kg"
+        android:onClick="removeWeight"
+        android:tag="20"  />
+
+    <Button
+        android:id="@+id/mBtnRem15Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mBtnAdd10Kg"
+        android:layout_toRightOf="@+id/mBtnAdd15Kg"
+        android:text="-15Kg"
+        android:onClick="removeWeight"
+        android:tag="15"  />
+
+    <TextView
+        android:id="@+id/mTx25Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnRem25kg"
+        android:layout_alignBottom="@+id/mBtnRem25kg"
+        android:layout_toRightOf="@+id/mBtnRem25kg" />
+
+    <TextView
+        android:id="@+id/mTx20Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnRem20Kg"
+        android:layout_alignBottom="@+id/mBtnRem20Kg"
+        android:layout_alignLeft="@+id/mTx25Kg" />
+
+    <TextView
+        android:id="@+id/mTx15Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnRem15Kg"
+        android:layout_alignBottom="@+id/mBtnRem15Kg"
+        android:layout_alignLeft="@+id/mTx20Kg" />
+
+    <StackView
+        android:id="@+id/StackView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mBtnAdd15Kg"
+        android:layout_below="@+id/mBtnAdd15Kg"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="31dp" >
+    </StackView>
+
+    <Button
+        android:id="@+id/mBtnRem5Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnAdd5Kg"
+        android:layout_alignBottom="@+id/mBtnAdd5Kg"
+        android:layout_toLeftOf="@+id/mTx10Kg"
+        android:layout_toRightOf="@+id/mBtnAdd5Kg"
+        android:text="-5Kg"
+        android:onClick="removeWeight"
+        android:tag="5"  />
+
+    <Button
+        android:id="@+id/mBtnAdd5Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mBtnAdd10Kg"
+        android:layout_alignRight="@+id/mBtnAdd10Kg"
+        android:layout_below="@+id/mBtnAdd10Kg"
+        android:text="+5Kg"
+        android:onClick="addWeight"
+        android:tag="5"  />
+
+    <TextView
+        android:id="@+id/mTx10Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnRem10Kg"
+        android:layout_alignBottom="@+id/mBtnRem10Kg"
+        android:layout_alignLeft="@+id/mTx15Kg"/>
+
+    <TextView
+        android:id="@+id/mTx5kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnRem5Kg"
+        android:layout_alignBottom="@+id/mBtnRem5Kg"
+        android:layout_toRightOf="@+id/mBtnRem5Kg"/>
+
+    <Button
+        android:id="@+id/mBtnAdd2_5Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mBtnAdd5Kg"
+        android:layout_below="@+id/mTx5kg"
+        android:onClick="addWeight"
+        android:tag="2.5"
+        android:text="+2.5Kg" />
+
+    <Button
+        android:id="@+id/mBtnRem2_5Kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mBtnAdd2_5Kg"
+        android:layout_alignBottom="@+id/mBtnAdd2_5Kg"
+        android:layout_toRightOf="@+id/mBtnAdd2_5Kg"
+        android:onClick="removeWeight"
+        android:tag="2.5"
+        android:text="-2.5Kg" />
+
+    <TextView
+        android:id="@+id/mTxWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mTxLbWeight"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/mBtnAdd2_5Kg"
+        android:layout_marginTop="24dp"
+        android:text="ffffffffff"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/mTxLbWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mBtnAdd2_5Kg"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/mTxWeight"
+        android:layout_marginTop="20dp"
+        android:text="ffffffffff"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
